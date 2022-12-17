@@ -118,6 +118,14 @@ JobRouter.get("/get", async (req, res) => {
      }
      return;
    }
+   else{
+     const jobs = await jobmodel.find().limit(10);
+     try {
+       res.send({ msg: "success", jobs: jobs });
+     } catch {
+       res.send({ msg: "failed" });
+     }
+   }
 
     
 });
