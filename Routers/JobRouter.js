@@ -137,7 +137,7 @@ JobRouter.get("/getrole/:role", async (req, res) => {
    
     
 });
-JobRouter.get("/getsear/:search", async (req, res) => {
+JobRouter.get("/search/:search", async (req, res) => {
   // http://localhost:8080/getsear/Java
   const { search } = req.params;
   console.log(search);
